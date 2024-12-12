@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:rgb(54, 54, 54);
+    background-color:rgb(108, 108, 108);
 }
 .container{
     display: flex;
@@ -52,4 +52,34 @@ body{
 }
 .seatStatusMain>.row>div{
     margin: 20px;
+}
+.resultTextMain{
+    margin-top: 10px;
+}
+.resultTextMain>p{
+    color: lightgray;
+    font-size: 18px;
+}
+.resultTextMain>p>span{
+    color: yellow;
+}
+#buyButton{
+    width: 100px;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: rgb(220, 114, 22);
+    border: none;
+    color: #fff;
+}
+#clearButton{
+    width: 100px;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: rgb(209, 23, 23);
+    border: none;
+    color: #fff;
 }
