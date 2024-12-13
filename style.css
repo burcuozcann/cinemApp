@@ -26,6 +26,9 @@ body{
     margin: 10px;
     color: rgb(200, 200, 200);
 }
+.seat:hover{
+    transform: scale(1.2);
+}
 #selectMovie{
     margin-top: 15px;
     width: 200px;
@@ -82,4 +85,16 @@ body{
     background-color: rgb(209, 23, 23);
     border: none;
     color: #fff;
+}
+.screen{
+    background-color: lightgray;
+    width: 650px;
+    height: 140px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px lightgray;
+}
+.screenTitle{
+    text-align: center;
 }
