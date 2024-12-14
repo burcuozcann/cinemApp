@@ -98,3 +98,12 @@ body{
 .screenTitle{
     text-align: center;
 }
+.empty{
+    color: lightgray;
+}
+.selected{
+    color: yellow;
+}
+.fullSeat{
+    color: red;
+}
