@@ -7,6 +7,7 @@ runEventListener();
 
 function runEventListener(){
     container.addEventListener("click",select);
+    selectMovie.addEventListener("change",changeMovie)
 }
 
 function select(e){
@@ -16,11 +17,16 @@ function select(e){
         calculate();
     }
 }
+function changeMovie(){
+calculate();
+}
 function getSelectedSeats(){
     const selectedList= [...container.querySelectorAll(".selected")];
     return selectedList;
 }
 function calculate(){
     const selectedSeatCount=getSelectedSeats().length;
+    const price=selectMovie.value;
     count.textContent=selectedSeatCount;
+    amount.textContent=selectedSeatCount*price;
 }
