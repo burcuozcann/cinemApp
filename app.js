@@ -2,6 +2,7 @@ const container=document.querySelector(".container");
 const selectMovie=document.querySelector("#selectMovie");
 const count=document.querySelector("#count");
 const amount=document.querySelector("#amount");
+const seats=document.querySelector('.seat');
 
 runEventListener();
 
@@ -23,6 +24,13 @@ calculate();
 function getSelectedSeats(){
     const selectedList= [...container.querySelectorAll(".selected")];
     return selectedList;
+}
+function getSelectedSeatsIndex(){
+    const selectedList=getSelectedSeats();
+    const selectedSeatsIndex=selectedList.map((seat)=>{
+        return seats.indexOf(seat);
+    })
+    return selectedSeatsIndex;
 }
 function calculate(){
     const selectedSeatCount=getSelectedSeats().length;
