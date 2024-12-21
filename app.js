@@ -2,7 +2,7 @@ const container=document.querySelector(".container");
 const selectMovie=document.querySelector("#selectMovie");
 const count=document.querySelector("#count");
 const amount=document.querySelector("#amount");
-const seats=document.querySelector('.seat');
+const seats=Array.from(document.querySelectorAll('.seat'));
 
 runEventListener();
 
