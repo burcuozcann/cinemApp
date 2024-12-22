@@ -16,6 +16,7 @@ function select(e){
     if(selectedElement.classList.contains("seat")){
         selectedElement.classList.toggle("selected");
         calculate();
+        saveSelectedSeatsIndexToStorage();
     }
 }
 function changeMovie(){
@@ -31,6 +32,11 @@ function getSelectedSeatsIndex(){
         return seats.indexOf(seat);
     })
     return selectedSeatsIndex;
+}
+function saveSelectedSeatsIndexToStorage(){
+    const selectedSeatsIndex=getSelectedSeatsIndex();
+    Storagex.addSelectedSeatToStorage(selectedSeatsIndex)
+
 }
 function calculate(){
     const selectedSeatCount=getSelectedSeats().length;

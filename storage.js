@@ -1,15 +1,15 @@
-class storagex{
+class Storagex{
 
-    static keyselectedSeats="keySelectedSeats";
-    static keyFullSeats;
-    static keySelectedMovie;
+    static keySelectedSeats="keySelectedSeats";
+    static keyFullSeats="keyFullSeats";
+    static keySelectedMovie="keySelectedMovie";
 
-    getSelectedSeatsFromStorage(){
+    static getSelectedSeatsFromStorage(){
     let selectedSeats;
-    if(localStorage.getItem(this.keyselectedSeats)===null){
+    if(localStorage.getItem(this.keySelectedSeats)===null){
         selectedSeats=[];
     }else{
-        selectedSeats=JSON.parse(localStorage.getItem(this.keyselectedSeats))
+        selectedSeats=JSON.parse(localStorage.getItem(this.keySelectedSeats))
     }
     return selectedSeats;
 
@@ -19,10 +19,13 @@ class storagex{
     if(localStorage.getItem(this.keyFullSeats)===null){
         keyFullSeats=[];
     }else{
-        fullSeats=JSON.parse(localStorage.getItem(this.keyselectedSeats))
+        fullSeats=JSON.parse(localStorage.getItem(this.keyFullSeats))
     }
     return fullSeats;
 
     }
+    static addSelectedSeatToStorage(indexs){
+    localStorage.setItem(this.keyselectedSeats,JSON.stringify(indexs))
+}
 }
 
