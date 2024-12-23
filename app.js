@@ -9,6 +9,15 @@ runEventListener();
 function runEventListener(){
     container.addEventListener("click",select);
     selectMovie.addEventListener("change",changeMovie)
+    document.addEventListener("DOMContentLoaded",runPageLoad);
+}
+function runPageLoad(){
+    const selectedSeatsIndex=Storagex.getSelectedSeats(); /////
+ seats.forEach((seat,index)=>{
+    if(selectedSeatsIndex.includes(index)){
+        seat.classList.add("selected");
+    }
+ })
 }
 
 function select(e){
