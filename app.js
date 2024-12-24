@@ -12,7 +12,7 @@ function runEventListener(){
     document.addEventListener("DOMContentLoaded",runPageLoad);
 }
 function runPageLoad(){
-    const selectedSeatsIndex=Storagex.getSelectedSeats(); /////
+    const selectedSeatsIndex=Storagex.getSelectedSeatsFromStorage();
  seats.forEach((seat,index)=>{
     if(selectedSeatsIndex.includes(index)){
         seat.classList.add("selected");
@@ -47,6 +47,7 @@ function saveSelectedSeatsIndexToStorage(){
     Storagex.addSelectedSeatToStorage(selectedSeatsIndex)
 
 }
+
 function calculate(){
     const selectedSeatCount=getSelectedSeats().length;
     const price=selectMovie.value;
