@@ -27,5 +27,13 @@ class Storagex{
     static addSelectedSeatToStorage(indexs){
     localStorage.setItem(this.keyselectedSeats,JSON.stringify(indexs))
 }
+    static addFullSeatToStorage(index){
+    localStorage.setItem(this.keyFullSeats,JSON.stringify(indexs))
+
+}
+    static addSelecetedMovieToStorage(index){
+    localStorage.setItem(this.keySelectedMovie,JSON.stringify(index))
+}
+
 }
 

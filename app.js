@@ -26,6 +26,7 @@ function select(e){
         selectedElement.classList.toggle("selected");
         calculate();
         saveSelectedSeatsIndexToStorage();
+        saveSelectedMovieIndexToStorage();
     }
 }
 function changeMovie(){
@@ -47,7 +48,10 @@ function saveSelectedSeatsIndexToStorage(){
     Storagex.addSelectedSeatToStorage(selectedSeatsIndex)
 
 }
-
+function saveSelectedMovieIndexToStorage(){
+    const selectedMovieIndex=selectMovie.selectedIndex;
+    Storagex.addSelecetedMovieToStorage(selectedMovieIndex)
+}
 function calculate(){
     const selectedSeatCount=getSelectedSeats().length;
     const price=selectMovie.value;
