@@ -31,6 +31,7 @@ function select(e){
 }
 function changeMovie(){
 calculate();
+saveSelectedMovieIndexToStorage();
 }
 function getSelectedSeats(){
     const selectedList= [...container.querySelectorAll(".selected")];
