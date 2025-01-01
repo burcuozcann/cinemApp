@@ -18,6 +18,7 @@ function runPageLoad(){
         seat.classList.add("selected");
     }
  })
+ selectMovie.selectedIndex=Storagex.getSelectedMovieIndexFromStorage()
 }
 
 function select(e){
@@ -30,8 +31,8 @@ function select(e){
     }
 }
 function changeMovie(){
-calculate();
-saveSelectedMovieIndexToStorage();
+    calculate();
+    saveSelectedMovieIndexToStorage();
 }
 function getSelectedSeats(){
     const selectedList= [...container.querySelectorAll(".selected")];

@@ -24,6 +24,11 @@ class Storagex{
     return fullSeats;
 
     }
+    static getSelectedMovieIndexFromStorage(){
+      return localStorage.getItem(this.keySelectedMovie);
+
+    }
+
     static addSelectedSeatToStorage(indexs){
     localStorage.setItem(this.keyselectedSeats,JSON.stringify(indexs))
 }
