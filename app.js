@@ -3,6 +3,7 @@ const selectMovie=document.querySelector("#selectMovie");
 const count=document.querySelector("#count");
 const amount=document.querySelector("#amount");
 const seats=Array.from(document.querySelectorAll('.seat'));
+const buyButton=document.querySelector("#buyButton");
 
 runEventListener();
 
@@ -10,6 +11,7 @@ function runEventListener(){
     container.addEventListener("click",select);
     selectMovie.addEventListener("change",changeMovie)
     document.addEventListener("DOMContentLoaded",runPageLoad);
+    buyButton.addEventListener("click",buyTicket);
 }
 function runPageLoad(){
     const selectedSeatsIndex=Storagex.getSelectedSeatsFromStorage();
@@ -19,6 +21,13 @@ function runPageLoad(){
     }
  })
  selectMovie.selectedIndex=Storagex.getSelectedMovieIndexFromStorage()
+}
+function buyTicket(){
+    if(confirm("Buy Now")){
+        const selectedSeatsIndex=getSelectedSeatsIndex();
+        console.log(selectedSeatsIndex);
+
+    }
 }
 
 function select(e){
