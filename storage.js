@@ -33,7 +33,7 @@ class Storagex{
     localStorage.setItem(this.keyselectedSeats,JSON.stringify(indexs))
 }
     static addFullSeatToStorage(indexs){
-      const fullSeatIndex=  getFullSeatsFromStorage();
+      const fullSeatIndex=  this.getFullSeatsFromStorage();
       indexs.forEach(index=>fullSeatIndex.push(index))
     localStorage.setItem(this.keyFullSeats,JSON.stringify(fullSeatIndex))
 

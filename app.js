@@ -24,8 +24,11 @@ function runPageLoad(){
 }
 function buyTicket(){
     if(confirm("Buy Now")){
+        const selectedSeats=getSelectedSeats();
         const selectedSeatsIndex=getSelectedSeatsIndex();
         console.log(selectedSeatsIndex);
+        selectedSeats.forEach(seat=>seat.classList.remove("selected"));
+        Storagex.addFullSeatToStorage(selectedSeatsIndex);
 
     }
 }
