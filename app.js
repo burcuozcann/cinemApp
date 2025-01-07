@@ -15,12 +15,20 @@ function runEventListener(){
 }
 function runPageLoad(){
     const selectedSeatsIndex=Storagex.getSelectedSeatsFromStorage();
- seats.forEach((seat,index)=>{
-    if(selectedSeatsIndex.includes(index)){
+    const fullSeatsIndex=Storagex.getFullSeatsFromStorage();
+    seats.forEach((seat,index)=>{
+        if(selectedSeatsIndex.includes(index)){
         seat.classList.add("selected");
     }
  })
- selectMovie.selectedIndex=Storagex.getSelectedMovieIndexFromStorage()
+
+    seats.forEach((seat,index)=>{
+        if (fullSeatsIndex.includes(index)) {
+            seat.classList.add("full")
+        }
+    })
+    selectMovie.selectedIndex=Storagex.getSelectedMovieIndexFromStorage();
+    calculate();
 }
 function buyTicket(){
     if(confirm("Buy Now")){
